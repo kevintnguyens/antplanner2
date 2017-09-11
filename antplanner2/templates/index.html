@@ -42,7 +42,7 @@
     </div>
     <div id="right">
       <iframe src="{{url_for('websoc_search_form')}}" id="soc" frameborder="0"></iframe>
-      
+       <button type="button" id="back-to-cal-btn" class="btn">Back To Calendar</button>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
@@ -217,10 +217,7 @@
         $('#clear-cal-btn').on('click', function() {
           $('#cal').weekCalendar('clear');
         });
-        //$(window).resize(function(){
-          if ($(window).width() <= 767) {
-            $('#clear-cal-btn').show();
-          }
+
         
         $('#find-class-btn').on('click',function() {
           $('#left').hide();
