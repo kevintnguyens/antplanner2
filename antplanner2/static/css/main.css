@@ -11,7 +11,9 @@ a {
 
 #left {
 	width: 50%;
+  position: relative;
 	float: left;
+
 }
 
 #right {
@@ -87,7 +89,14 @@ a {
 	float: left;
 	position: relative;
 }
-
+#back-to-cal-btn {
+  display: none;
+  position: absolute;
+  margin-top: 4px;
+}
+#find-class-btn {
+  display: none;
+}
 /* weekly calendar overrides */
 .wc-header {
 	background: #fff;
@@ -113,4 +122,31 @@ a {
 		font-size: 10px !important;
 		border: 1px solid black;
 	}
+}
+/* mobile theming */
+@media (max-width:767px) {
+  #left {
+    width: 100%;
+  }
+  #right {
+
+    display: none;
+    width: 100%;
+  }
+  #find-class-btn {
+    display: inline-block;
+  }
+  #back-to-cal-btn {
+    display: inline-block;
+    right: 0;
+  }
+
+}
+@media (min-width: 768px) {
+  #left {
+    display: block !important;
+  }
+  #right {
+    display: block !important;
+  }
 }
